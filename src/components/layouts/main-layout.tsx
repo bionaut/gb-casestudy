@@ -2,14 +2,11 @@ import { FC, PropsWithChildren } from 'react'
 import { LinkItem } from '@t/common-types'
 
 import { Navbar } from '../navigation/navbar'
-import { route } from '../../routes/routes'
 import { Footer } from '../footer'
 
 const navItems: LinkItem[] = [
-  {
-    label: 'How (come) it works',
-    href: route('howItWorks'),
-  },
+  // noting to see here, but feel free to add your own links using the route() helper
+  // { label: 'Home', href: route('home') },
 ]
 
 export const MainLayout: FC<PropsWithChildren> = ({ children }) => {

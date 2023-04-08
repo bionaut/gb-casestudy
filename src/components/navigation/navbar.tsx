@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Bars3Icon, ShoppingCartIcon } from '@heroicons/react/24/solid'
 import { LinkItem } from '@t/common-types'
-import { route } from "../../routes/routes";
+import { route } from '../../routes/routes'
 
 interface NavbarProps {
   items: LinkItem[]
@@ -34,12 +34,12 @@ export const Navbar: FC<NavbarProps> = (props) => {
           </ul>
         </div>
         <Link href={route('home')}>
-          <Image className={'dark:invert h-10 w-auto'} alt={'gymbeam logo'} width={700} height={200} src="/logo.webp" />
+          <Image className={'dark:invert h-10 w-auto'} alt={'gymbeam logo'} width={114} height={40} src="/logo.webp" />
         </Link>
       </div>
       <div className="navbar-end px-4 space-x-2">
         <ul className="menu menu-horizontal hidden lg:flex px-1">{menuItems}</ul>
-        <button className={'btn btn-ghost btn-circle'}>
+        <button role={'button'} aria-label={'shopping-cart'} className={'btn btn-ghost btn-circle'}>
           <ShoppingCartIcon className={' h-6 w-6'} />
         </button>
         <div className="btn btn-circle avatar">

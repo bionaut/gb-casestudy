@@ -19,8 +19,7 @@ export const getProducts = async (searchParams: Record<string, string>): Promise
       urlWithFilterParams.searchParams.append(key, value)
     })
 
-    console.log('Fetching products from: ', urlWithFilterParams.toString())
-    const response = await fetch(urlWithFilterParams.toString())
+    const response = await fetch(urlWithFilterParams.toString(), { cache: 'no-store' })
     const raw = await response.json()
 
     if (!Array.isArray(raw.items)) {

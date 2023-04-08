@@ -16,8 +16,8 @@ export const routes = {
       productId: z.string(),
     },
   },
-  howItWorks: {
-    path: '/how-it-works',
+  about: {
+    path: '/about',
     params: {},
   },
 }
